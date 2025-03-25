@@ -1,5 +1,5 @@
 """
-URL configuration for w06 project.
+URL configuration for pkpl project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from w07.views import login_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('user.urls')),
+    path('', include('w07.urls')),
 ]
+

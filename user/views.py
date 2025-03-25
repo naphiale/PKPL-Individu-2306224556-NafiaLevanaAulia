@@ -5,7 +5,6 @@ def user_form_view(request):
     if request.method == 'POST':
         form = UserForm(request.POST)
         if form.is_valid():
-            # Data yang valid dapat disimpan atau digunakan sesuai kebutuhan
             return render(request, 'success.html', {'form': form})
     else:
         form = UserForm()
